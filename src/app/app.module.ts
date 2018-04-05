@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { FormsModule }    from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HumanComponent } from './human/human.component';
 import { NewsComponent } from './news/news.component';
 import { ProductsComponent } from './products/products.component';
 import { ConfigComponent } from './config/config.component';
-
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,13 @@ import { ConfigComponent } from './config/config.component';
     HumanComponent,
     NewsComponent,
     ProductsComponent,
-    ConfigComponent
+    ConfigComponent,
+    DashboardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
